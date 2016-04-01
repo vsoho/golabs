@@ -6,14 +6,15 @@ import (
 	"time"
 )
 
-var i = 6
-
 func say(s string) {
 	for i := 0; i < 5; i++ {
 		time.Sleep(100 * time.Millisecond)
 		fmt.Println(s)
 	}
 }
+
+var i, t int = 6, 9
+var a = 8
 
 func main() {
 
