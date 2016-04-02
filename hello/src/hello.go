@@ -16,7 +16,7 @@ func say(s string) {
 var i, t int = 6, 9
 var a = 8
 
-func main() {
+func main1() {
 
 	ch := make(chan int, 2)
 
