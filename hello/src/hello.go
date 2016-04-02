@@ -17,6 +17,14 @@ func say(s string) {
 
 func main() {
 
+	ch := make(chan int, 2)
+
+	ch <- 1
+	ch <- 2
+
+	fmt.Println(<-ch)
+	fmt.Println(<-ch)
+
 	go say("world")
 
 	fmt.Println("Hello, world")
@@ -26,4 +34,5 @@ func main() {
 		time.Sleep(200 * time.Millisecond)
 		fmt.Println("comp")
 	}
+
 }
