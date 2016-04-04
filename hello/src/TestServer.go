@@ -7,6 +7,9 @@ import (
 )
 
 func handleConnection(conn net.Conn) {
+	var str = "hello"
+
+	conn.Write([]byte(str))
 	io.Copy(conn, conn)
 	conn.Close()
 }
